@@ -14,6 +14,7 @@ import Testimonials from "./pages/Testimonials";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Newsletter from "./pages/Newsletter";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
