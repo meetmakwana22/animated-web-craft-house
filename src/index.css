@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +91,28 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-purple text-white px-6 py-3 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-brand-purple/20 active:translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-brand-purple text-brand-purple px-6 py-3 rounded-lg font-medium transition-all hover:bg-brand-purple/5;
+  }
+  
+  .service-card {
+    @apply p-6 rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white border border-gray-100;
+  }
+  
+  .animated-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-brand-purple after:transition-all after:duration-300 hover:after:w-full;
   }
 }
