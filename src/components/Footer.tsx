@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -7,9 +8,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <a href="#" className="text-2xl font-bold mb-6 block">
+            <Link to="/" className="text-2xl font-bold mb-6 block">
               <span className="text-brand-purple">Web</span>Craft
-            </a>
+            </Link>
             <p className="text-gray-300 mb-6">
               Creating exceptional digital experiences that help businesses grow and thrive in the digital landscape.
             </p>
@@ -45,19 +46,19 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Website Design</a>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Website Design</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Web Development</a>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Web Development</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">E-commerce Solutions</a>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">E-commerce Solutions</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">UI/UX Design</a>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">UI/UX Design</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">SEO Optimization</a>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">SEO Optimization</Link>
               </li>
             </ul>
           </div>
@@ -66,19 +67,22 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
               </li>
               <li>
-                <a href="#process" className="text-gray-300 hover:text-white transition-colors">Our Process</a>
+                <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors">Portfolio</Link>
               </li>
               <li>
-                <a href="#portfolio" className="text-gray-300 hover:text-white transition-colors">Portfolio</a>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+                <Link to="/testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</Link>
+              </li>
+              <li>
+                <Link to="/newsletter" className="text-gray-300 hover:text-white transition-colors">Newsletter</Link>
               </li>
             </ul>
           </div>
@@ -114,8 +118,8 @@ const Footer: React.FC = () => {
               &copy; {new Date().getFullYear()} WebCraft. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Sitemap</a>
             </div>
           </div>

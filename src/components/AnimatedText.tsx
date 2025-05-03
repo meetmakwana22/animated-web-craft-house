@@ -46,7 +46,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   return (
     <div 
       ref={textRef} 
-      className={cn("opacity-0", className)}
+      className={cn(className)}
     >
       {text}
     </div>
